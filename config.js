@@ -1,51 +1,26 @@
-// ===============================
-// KAM FAM SOCIAL QR CONFIG
-// ===============================
-
 const CONFIG = {
   brand: {
     name: "KAM Fam",
-    memberName: "KAM Klub Member",
-    themeColor: "#ff2bd6", // neon pink
+    memberTag: "KAM Klub",
     textColor: "#ffffff",
-    accentOutline: "#ff2bd6"
-  },
-
-  qr: {
-    size: 140, // px
-    cornerPosition: "bottom-right", // top-left, top-right, bottom-left, bottom-right
-    padding: 20,
-    borderRadius: 12,
-    background: "rgba(0,0,0,0.65)"
+    accent: "#ff2bd6"
   },
 
   links: {
-    youtube: "https://youtube.com/@YOURCHANNEL",
-    facebook: "https://facebook.com/YOURPAGE",
-    instagram: "https://instagram.com/YOURHANDLE",
-    merch: "https://YOURSTORE.fourthwall.com",
-    membership: "https://youtube.com/@YOURCHANNEL/join"
+    FACEBOOK: "http://facebook.com/share/1ApkbDVWTA",
+    INSTAGRAM: "http://instagram.com/thekamfamtx",
+    YOUTUBE: "https://youtube.com/@TheKAMFamTX?sub_confirmation=1",
+    KAM_KLUB: "https://www.youtube.com/channel/UCPqBUO8PkVkOkoLjiV9rwsw/join",
+    MERCH: "https://the-kam-fam-shop.fourthwall.com/"
+  },
+
+  qr: {
+    size: 170
   },
 
   display: {
-    showQRCode: true,
-    showBranding: true,
-    showMemberTag: true,
-    rotateLinks: false,     // if true cycles QR targets
-    rotationSpeed: 8000,    // ms
-    animationStyle: "pulse" // pulse, fade, none
-  },
-
-  overlay: {
-    opacity: 0.95,
-    blur: 6,
-    borderGlow: true,
-    shadow: true
-  },
-
-  memberMessage: {
-    enabled: true,
-    text: "Thanks for becoming a KAM Klub Member!",
-    subText: "Welcome to the crew 💥"
+    rotate: true,
+    rotationSpeed: 5000
   }
 };
+
