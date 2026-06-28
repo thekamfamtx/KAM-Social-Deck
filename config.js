@@ -1,17 +1,30 @@
 const CONFIG = {
   brand: {
-    name: "KAM Fam",
-    memberTag: "KAM Klub",
-    textColor: "#ffffff",
-    accent: "#ff2bd6"
+    title: "KAM Fam",
+    subtitle: "KAM Klub",
   },
 
   links: {
-    FACEBOOK: "http://facebook.com/share/1ApkbDVWTA",
-    INSTAGRAM: "http://instagram.com/thekamfamtx",
-    YOUTUBE: "https://youtube.com/@TheKAMFamTX?sub_confirmation=1",
-    KAM_KLUB: "https://www.youtube.com/channel/UCPqBUO8PkVkOkoLjiV9rwsw/join",
-    MERCH: "https://the-kam-fam-shop.fourthwall.com/"
+    FACEBOOK: {
+      url: "https://facebook.com/YOURPAGE",
+      color: "#1877F2"
+    },
+    INSTAGRAM: {
+      url: "https://instagram.com/YOURHANDLE",
+      color: "#ff2bd6"
+    },
+    YOUTUBE: {
+      url: "https://youtube.com/@YOURCHANNEL",
+      color: "#ff0000"
+    },
+    KAM_KLUB: {
+      url: "https://youtube.com/@YOURCHANNEL/join",
+      color: "#9b5cff"
+    },
+    MERCH: {
+      url: "https://YOURSTORE.fourthwall.com",
+      color: "#00ff9d"
+    }
   },
 
   qr: {
@@ -23,4 +36,3 @@ const CONFIG = {
     rotationSpeed: 5000
   }
 };
-
