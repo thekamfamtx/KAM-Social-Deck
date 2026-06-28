@@ -4,54 +4,55 @@ let keys = [];
 document.addEventListener("DOMContentLoaded", () => {
   keys = Object.keys(CONFIG.links);
 
-  renderAll();
-  generateQR(getCurrent());
+  render();
+  drawQR();
 
   if (CONFIG.display.rotate) {
     setInterval(() => {
       index = (index + 1) % keys.length;
-      renderAll();
-      generateQR(getCurrent());
+      render();
+      drawQR();
     }, CONFIG.display.rotationSpeed);
   }
 });
 
-// ------------------
-// CURRENT LINK
-// ------------------
-function getCurrent() {
-  return CONFIG.links[keys[index]];
+function currentKey() {
+  return keys[index];
 }
 
-// ------------------
-// RENDER TEXT UI
-// ------------------
-function renderAll() {
+function currentData() {
+  return CONFIG.links[currentKey()];
+}
+
+function render() {
   const brand = document.getElementById("brandName");
-  const member = document.getElementById("memberTag");
+  const sub = document.getElementById("memberTag");
   const label = document.getElementById("qrLabel");
+  const overlay = document.querySelector(".overlay");
 
-  if (brand) brand.textContent = CONFIG.brand.name;
-  if (member) member.textContent = CONFIG.brand.memberTag;
+  const key = currentKey();
+  const data = currentData();
 
-  if (label) {
-    // cleaner display labels (no underscores)
-    const pretty = keys[index].replaceAll("_", " ");
-    label.textContent = pretty;
+  if (brand) brand.textContent = CONFIG.brand.title;
+  if (sub) sub.textContent = CONFIG.brand.subtitle;
+
+  if (label) label.textContent = key.replaceAll("_", " ");
+
+  // apply dynamic color theme
+  if (overlay) {
+    overlay.style.boxShadow = `0 0 18px ${data.color}`;
+    overlay.style.border = `2px solid ${data.color}`;
   }
 }
 
-// ------------------
-// QR CODE GENERATION
-// ------------------
-function generateQR(url) {
+function drawQR() {
   const container = document.getElementById("qrcode");
   if (!container) return;
 
   container.innerHTML = "";
 
   new QRCode(container, {
-    text: url,
+    text: currentData().url,
     width: CONFIG.qr.size,
     height: CONFIG.qr.size,
     colorDark: "#ffffff",
