@@ -1,62 +1,54 @@
-/* FULL SCREEN OVERLAY */
 body {
   margin: 0;
-  padding: 0;
   background: transparent;
   font-family: Arial, sans-serif;
 }
 
-/* MAIN WRAPPER */
 .overlay {
-  width: 300px;
-  height: 320px;
-  background: rgba(0, 0, 0, 0.65);
-  border-radius: 16px;
-  padding: 12px;
+  width: 320px;
+  height: 340px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 18px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 0 15px #ff2bd6;
+  transition: all 0.4s ease;
 }
 
-/* TOP TEXT */
-.top {
+/* TOP */
+#brandName {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
   text-align: center;
 }
 
-.brand {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.member {
+#memberTag {
   font-size: 14px;
+  text-align: center;
   color: #ff2bd6;
   margin-top: 2px;
 }
 
-/* QR CENTER */
+/* CENTER QR */
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.qr {
-  padding: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+#qrcode {
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
 }
 
 /* BOTTOM LABEL */
-.bottom {
+#qrLabel {
   text-align: center;
-}
-
-.label {
   font-size: 14px;
+  letter-spacing: 1px;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
