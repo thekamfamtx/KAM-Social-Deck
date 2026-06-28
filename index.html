@@ -1,67 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAM Social Deck</title>
+  <meta charset="UTF-8" />
+  <title>KAM Fam QR Overlay</title>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- QR Code Library -->
-    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <!-- QR Code Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
+
 <body>
 
-<div id="overlay" class="overlay">
+  <div class="overlay">
 
-    <!-- Background Effects -->
-    <div class="backgroundGlow"></div>
-
-    <!-- Header -->
-    <div class="header">
-
-        <div class="headerIcon">
-            <img id="platformIcon" src="" alt="">
-        </div>
-
-        <div class="headerTitle" id="platformName">
-            FACEBOOK
-        </div>
-
-        <div class="shine"></div>
-
+    <div class="top">
+      <div id="brandName" class="brand"></div>
+      <div id="memberTag" class="member"></div>
     </div>
 
-    <!-- Main Content -->
-    <div class="main">
-
-        <div class="qrWrapper">
-
-            <div class="qrGlow"></div>
-
-            <div id="qrcode"></div>
-
-        </div>
-
+    <div class="center">
+      <div id="qrcode" class="qr"></div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-
-        <div id="subtitle">
-            Join The KAM Fam Community
-        </div>
-
+    <div class="bottom">
+      <div id="qrLabel" class="label"></div>
     </div>
 
-</div>
+  </div>
 
-<!-- Configuration -->
-<script src="config.js"></script>
-
-<!-- Main Script -->
-<script src="script.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
